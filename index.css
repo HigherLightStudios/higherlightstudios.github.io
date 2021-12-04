@@ -1,0 +1,247 @@
+@font-face {font-family: "Acumin Variable Concept";
+    src: url("font/066ce24dae3730ed6c648b09efaea93a.eot"); /* IE9*/
+    src: url("font/066ce24dae3730ed6c648b09efaea93a.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("font/066ce24dae3730ed6c648b09efaea93a.woff2") format("woff2"), /* chrome、firefox */
+    url("font/066ce24dae3730ed6c648b09efaea93a.woff") format("woff"), /* chrome、firefox */
+    url("font/066ce24dae3730ed6c648b09efaea93a.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("font/066ce24dae3730ed6c648b09efaea93a.svg#Acumin Variable Concept") format("svg"); /* iOS 4.1- */
+  }
+@font-face {
+    font-family: "Source Sans Variable";
+    src: url("font/SourceSansRegular.ttf");
+}
+@font-face {
+    font-family: "Bahnschrift";
+    src: url("font/BahnschriftRegular.TTF");
+}
+
+:root {
+    font-size: 20px;
+    font-family: "Source Sans Pro";
+    margin: 0;
+    padding: 0;
+
+    
+
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#fadein {
+    width: 500rem;
+    height: 500rem;
+    background: rgba(0, 0, 0, 0.445);
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transition: background 100ms;
+}
+
+#darkmode-tu {
+    z-index: 3;
+    position: absolute;
+    background: white;
+    padding: 2rem;
+    border-radius: 4px;
+    pointer-events: none;
+    transform: translate(-2rem);
+    transition: background 1s;
+    transition: color 1s;
+    transition: opacity 100ms;
+
+
+}
+
+#arrow {
+    z-index: 3;
+    width: 2rem;
+    pointer-events: none;
+    transform: translate(-1rem,12rem);
+    transition: opacity 100ms;
+}
+
+#logo {
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    align-items: left;
+    justify-content: left;
+    z-index: -10;
+
+    transform: translate(-8rem,1rem);
+}
+
+header {
+    transform: translate(0,10rem);
+}
+
+header .title {
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: "Acumin Variable Concept";
+}
+
+header .subtitle {
+    text-align: center;
+    font-size: 2rem;
+
+    transform: translate(0,-2rem);
+}
+
+.navbar {
+    list-style: none;
+    transform: translate(0,-3rem);
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    
+}
+
+.navbar a {
+    font-family: "Acumin Variable Concept";
+    padding: 0.7rem 0.5rem 0.5rem 0.5rem;
+    margin: 2rem;
+    background: white;
+    border: 2px solid #999999;
+    border-radius: 2px;
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+    transition: background-color 0.2s;
+    transition: color 0.5s;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px;
+}
+
+.navbar a:hover {
+    background: #999999;
+    border-color: #999999;
+    color: white;
+    transition: background-color 0.2s;
+    transition: color 0.5s;
+}
+
+.navbar .selected {
+    border-color: rgb(131, 214, 241);
+    background-color: rgb(131, 214, 241);
+}
+
+.navbar .selected:hover {
+    color: black;
+    border-color: rgb(131, 214, 241);
+    background-color: rgb(131, 214, 241);
+}
+
+.blog-post {
+    border: 2px solid #999999;
+    background: white;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    position: absolute;
+    transform: translate(0,37rem);
+    width: 30rem;
+    height: 18rem;
+    padding-top: 1rem;
+    padding-right: 3rem;
+    padding-left: 10rem;
+    padding-bottom: 2rem;
+}
+
+.blog-title {
+    font-size: 1.8rem;
+    left: 2rem;
+    position: absolute;
+    float: left;
+    transform: translateY(2.5rem);
+}
+
+.blog-content {
+    font-family: "Source Sans Variable";
+    font-size: 1.18rem;
+    position: absolute;
+    left: 2rem;
+    white-space: normal;
+    transform: translate(0,6rem);
+    margin-right: 2rem;
+}
+
+.blog-tag {
+    position: absolute;
+    font-family: "Bahnschrift";
+    font-size: 1.25rem;
+    background-image: linear-gradient(90deg,#ffd900, #ffe44e);
+    color: white;
+    padding: 0.3rem 0.7rem 0.3rem 0.7rem;
+    transform: translate(-8rem);
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+.readmore {
+    font-family: "Bahnschrift";
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    color: #929292;
+    transform: translate(-8rem,15rem);
+    text-decoration: none;
+    height: 30px;
+    
+}
+
+.readmore:hover {
+    text-decoration: underline 2px;
+}
+
+#subscribe {
+    font-family: "Acumin Variable Concept";
+    font-size: 1.25rem;
+    background: #E6E6E6;
+    color: black;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    height: 2rem;
+    padding: 0.75rem 1rem 2rem 1rem;
+    position: absolute;
+    transform: translate(24.5rem,-0.2rem);
+    cursor: pointer;
+    
+    transition: background 300ms;
+}
+
+#subscribe:hover {
+    cursor: pointer;
+    background: #999999;
+    color: rgb(0, 0, 0);
+    transition: background 300ms;
+}
+
+#subscribe-clicked {
+    font-family: "Acumin Variable Concept";
+    font-size: 1.25rem;
+    background:rgb(255, 53, 53);
+    color: white;
+    border: none;
+    border-radius: 2px;
+    text-decoration: none;
+    height: 2rem;
+    padding: 0.75rem 0.65rem 2rem 0.65rem;
+    position: absolute;
+    transform: translate(24.5rem,-0.2rem);
+    cursor: pointer;
+    
+    transition: background 0.2s;
+    transition: color 0.5s;
+}
